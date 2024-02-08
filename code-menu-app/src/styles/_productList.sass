@@ -1,0 +1,123 @@
+$border-radius: 10px
+$padding-small: 10px
+$padding-medium: 20px
+$grid-gap: 15px
+$text-color: #2C2116
+$error-color: #FF0000
+$loading-color: #FFFFFF
+$button-bg-color: #F3DFA0 
+$font-title-size: 35px
+$font-title-weight: 500
+$font-title-family: 'Bebas Neue', sans-serif
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap')
+
+.product-list-page
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+  width: 100%
+
+  h2
+    color: #EAEAEA
+    font-size: $font-title-size
+    font-weight: $font-title-weight
+    font-family: $font-title-family
+    margin: $padding-medium 0
+    padding-left: $padding-medium
+
+  .category-buttons
+    display: flex
+    flex-wrap: wrap
+    gap: $padding-small
+    justify-content: center
+    margin-bottom: $padding-medium
+    padding: $padding-medium
+
+  .btnCategory
+    font-size: 20px
+    min-width: 200px
+    font-weight: $font-title-weight
+    font-family: $font-title-family
+    background-color: $button-bg-color
+    color: $text-color
+    border: none
+    border-radius: $border-radius
+    padding: $padding-small $padding-medium
+    cursor: pointer
+    transition: background-color 0.2s
+
+    &:hover
+      background-color: #D77F33
+
+  .add-Product
+    font-size: 20px
+    min-width: 200px
+    font-weight: $font-title-weight
+    font-family: $font-title-family
+    background-color: #2C2116
+    color: #EAEAEA
+    border: solid 1px #D77F33
+    border-radius: $border-radius
+    padding: $padding-small $padding-medium
+    cursor: pointer
+    transition: background-color 0.2s
+
+    &:hover
+      background-color: #D77F33
+
+  .product-list
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+    grid-gap: $grid-gap
+    justify-content: center
+    width: 100%
+    max-width: 1200px
+    margin: auto
+
+  .loading-message
+    color: $loading-color
+    text-align: center
+    padding: $padding-medium
+
+  .error-message
+    color: $error-color
+    text-align: center
+    padding: $padding-medium
+
+.product-actions
+  display: flex
+  justify-content: space-between
+  margin-top: $padding-medium
+
+  button
+    font-size: 1rem
+    padding: $padding-small $padding-medium
+    background-color: #F3DFA0
+    margin: 5px
+    color: $text-color
+    border: none
+    border-radius: $border-radius
+    cursor: pointer
+    transition: background-color 0.3s
+
+    &:hover
+      background-color: #D77F33
+
+@media (max-width: 767px)
+  .product-list-page
+    padding: $padding-small
+
+  .category-buttons
+    flex-direction: column
+    flex-wrap: nowrap
+    align-items: center
+    padding: 0
+
+    button
+      margin-bottom: $padding-small
+
+  .product-list
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+    grid-gap: 10px

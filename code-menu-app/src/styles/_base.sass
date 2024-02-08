@@ -1,0 +1,24 @@
+$font-secondary: 'Arial', sans-serif 
+$text-color: #EAEAEA 
+$primary-color: #D77F33 
+
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  line-height: 1.6
+  background-color: #20170E
+  font-family: $font-secondary
+  color: $text-color
+  margin: 0
+  padding: 0
+
+a
+  color: $primary-color
+  &:hover
+    color: darken($primary-color, 10%)

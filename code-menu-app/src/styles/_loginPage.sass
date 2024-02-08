@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap')
+
+$background-color: #20170E
+$text-color: #F3DFA0
+$border-color: #D77F33
+$button-background: #F3DFA0
+$button-hover-background: darken($button-background, 10%)
+$font-family: 'Bebas Neue', sans-serif
+$border-radius: 5px
+$padding: 10px
+$input-background: #FFFFFF 
+
+.login-page
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: start
+  margin-top: 2rem
+  min-height: 100vh
+  background-color: $background-color
+  color: $text-color
+  font-family: $font-family
+  text-align: center
+
+  h2
+    margin-bottom: 1.5rem
+    font-size: 3rem
+
+  .input-container
+    border: 2px solid $border-color
+    border-radius: $border-radius
+    padding: 1rem
+    background-color: #2C2116
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 0.5rem
+    margin-bottom: 1rem
+
+  input[type="text"],
+  input[type="password"]
+    width: 100%
+    padding: 12px
+    border-radius: $border-radius
+    border: 1px solid $border-color
+    font-size: 0.8rem
+    margin: 0.5rem 0
+
+  button
+    padding: $padding
+    border: none
+    border-radius: $border-radius
+    background-color: $button-background
+    color: $background-color
+    font-size: 1rem
+    cursor: pointer
+    transition: background-color 0.2s ease-in-out
+
+    &:hover
+      background-color: #F34E26

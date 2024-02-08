@@ -1,0 +1,98 @@
+$border-radius: 10px
+$padding-small: 10px
+$padding-medium: 20px
+$border-radius-small: 5px
+$max-image-size: 200px
+$card-background: #2C2116
+$border-color: #D77F33
+$text-color: #EAEAEA
+$button-hover-bg: lighten($border-color, 10%)
+$grid-gap: 20px
+$details-price-container-width: 100%
+$details-price-container-height: 60px
+$button-width: 120px
+$button-height: 40px
+
+.product-detail-page
+  color: $text-color
+  padding: 2rem
+  text-align: center
+ 
+  
+  .product-name
+    font-family: 'Bebas Neue', sans-serif
+    font-size: 2.5rem
+    margin-bottom: $padding-medium
+
+  .product-container
+  
+    display: flex
+    justify-content: space-around
+    
+    padding: $padding-medium
+    border: 1px solid $border-color
+    border-radius: $border-radius
+    
+    @media (max-width: 767px)
+      flex-direction: column
+      align-items: center
+
+    .product-image
+      width: auto
+      height: 40vh 
+      max-width:100%
+      max-height:100%
+      border-radius: $border-radius-small
+
+    .product-info
+      display: flex
+      flex-direction: column
+      justify-content: center
+      margin-left: $padding-medium
+      
+      @media (max-width: 767px)
+        margin-left: 0
+        align-items: center
+
+      .product-title, .product-ingredients
+        background: $card-background
+        color: $text-color
+        padding: $padding-small
+        border-radius: $border-radius-small
+        margin: 1rem
+
+      .price-container
+        display: flex
+        justify-content: flex-end
+
+      .product-price
+        background-color: #F3DFA0
+        color: $background-color
+        padding: $padding-small
+        border-radius: $border-radius-small
+        margin: 1rem
+        padding: 1.5rem
+        width: auto
+
+  .button-container
+    width: auto
+    height: auto
+    display: flex
+    justify-content: center
+    margin-top: $padding-medium
+
+  .add-to-cart-button
+    background-color: #F3DFA0
+    color: $background-color
+    cursor: pointer
+    font-size: 1.2rem
+    font-weight: 600
+    border: none
+    border-radius: $border-radius-small
+    padding: $padding-small
+    width: 50%
+    height: auto
+    transition: background-color 0.2s
+
+    &:hover
+      background-color: $border-color

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap')
+
+$background-color: #20170E
+$card-background: #2C2116
+$text-color: #EAEAEA
+$border-color: #D77F33
+$font-family: 'Arial', sans-serif 
+$button-bg-color: transparent
+$button-hover-bg-color: #D77F33
+$border-radius-small: 5px
+$padding-small: 10px
+$font-title-size: 60px
+$font-title-family: 'Bebas Neue', sans-serif
+
+.home-page
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: 2rem
+  justify-content: start
+  min-height: 100vh
+  text-align: center
+  background-color: $background-color
+  font-family: $font-family
+  padding: 2rem 
+
+  h1
+    margin-bottom: 1rem
+    color: #F3DFA0
+    font-family: $font-title-family
+    font-size: $font-title-size
+
+  p
+    width: 100% 
+    max-width: 800px 
+    text-align: center
+    padding: $padding-small 
+    margin-bottom: 1rem
+    color: $text-color 
+    font-size: 1.1rem
+    font-family: $font-family
+
+
+  .buttons-container
+    display: flex
+    flex-wrap: wrap 
+    gap: 20px 
+    justify-content: center
+
+
+  .menu-link, .admin-link
+    background-color: $button-bg-color
+    border: 1px solid $border-color
+    border-radius: $border-radius-small
+    cursor: pointer
+    color: $text-color
+    font-family: $font-family
+    font-size: 1rem
+    padding: $padding-small
+    text-decoration: none
+    transition: background-color 0.2s ease-in-out
+
+    &:hover
+      background-color: $button-hover-bg-color
+      color: $card-background
